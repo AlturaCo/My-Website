@@ -1,7 +1,7 @@
 /* =============================================================
-   Altura Co — Global Stylesheet
-   YC-inspired: white-dominant, near-black text, bold type,
-   electric blue accent, minimal chrome, scroll reveals.
+   AlturaCo — Global Stylesheet
+   White-dominant, near-black text, bold type,
+   amber/orange accent, minimal chrome, scroll reveals.
    ============================================================= */
 
 :root {
@@ -15,20 +15,20 @@
   --dark-mid: #161616;
   --dark-alt: #1d1d1d;
 
-  /* Electric blue accent */
-  --blue:        #2563eb;
-  --blue-bright: #3b82f6;
-  --blue-dark:   #1d4ed8;
-  --blue-pale:   #eff6ff;
-  --blue-glow:   rgba(37, 99, 235, 0.10);
-  --blue-border: rgba(37, 99, 235, 0.22);
+  /* Amber/orange accent */
+  --blue:        #d97706;
+  --blue-bright: #f59e0b;
+  --blue-dark:   #b45309;
+  --blue-pale:   #fffbeb;
+  --blue-glow:   rgba(217, 119, 6, 0.10);
+  --blue-border: rgba(217, 119, 6, 0.22);
 
   /* Alias: HTML inline styles reference --green* */
-  --green:        #2563eb;
-  --green-bright: #3b82f6;
-  --green-dark:   #1d4ed8;
-  --green-glow:   rgba(37, 99, 235, 0.10);
-  --green-border: rgba(37, 99, 235, 0.22);
+  --green:        #d97706;
+  --green-bright: #f59e0b;
+  --green-dark:   #b45309;
+  --green-glow:   rgba(217, 119, 6, 0.10);
+  --green-border: rgba(217, 119, 6, 0.22);
 
   /* Light-section text */
   --text:      #111111;
@@ -142,7 +142,7 @@ p  { line-height: 1.72; }
 .btn--primary:hover {
   background: var(--blue-dark);
   border-color: var(--blue-dark);
-  box-shadow: 0 4px 18px rgba(37,99,235,.32);
+  box-shadow: 0 4px 18px rgba(217,119,6,.32);
 }
 
 .btn--ghost {
@@ -212,7 +212,6 @@ p  { line-height: 1.72; }
   transition: color .18s;
 }
 .nav--scrolled .nav__logo { color: var(--text); }
-.nav__logo span { color: var(--blue); }
 .nav__logo-icon {
   width: 20px; height: 20px;
   flex-shrink: 0;
@@ -673,7 +672,7 @@ p  { line-height: 1.72; }
 .cta-strip .btn--primary:hover {
   background: var(--blue-dark);
   border-color: var(--blue-dark);
-  box-shadow: 0 4px 20px rgba(37,99,235,.4);
+  box-shadow: 0 4px 20px rgba(217,119,6,.4);
 }
 .cta-strip__sub { margin-top: 14px; font-size: .78rem; color: var(--dt-muted); }
 
