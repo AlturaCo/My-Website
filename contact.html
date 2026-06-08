@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book &mdash; AlturaCo</title>
+  <meta name="description" content="Book a free audit with AlturaCo. Tell us about your subscription-box brand and we&rsquo;ll review your entire subscriber journey.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-info__item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-info__item:first-child { border-top: 1px solid var(--border); }
+    .contact-info__icon {
+      width: 40px; height: 40px;
+      background: var(--green-glow);
+      border: 1px solid var(--green-border);
+      border-radius: var(--r-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .contact-info__label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 4px; }
+    .contact-info__value { font-size: .92rem; color: var(--text-mid); }
+    .contact-info__value a { color: var(--green); }
+    .contact-info__value a:hover { text-decoration: underline; }
+
+    .process-step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 20px 0;
+    }
+    .process-step__num {
+      width: 32px; height: 32px;
+      background: var(--green-glow);
+      border: 1px solid var(--green-border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+    .process-step h4 { margin-bottom: 4px; font-size: .92rem; }
+    .process-step p  { font-size: .83rem; color: var(--muted); line-height: 1.55; }
+
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo"><img src="logo.svg" alt="" class="nav__logo-icon" aria-hidden="true">AlturaCo</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#who-we-serve">Who We Serve</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="btn btn--primary btn--sm active">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <p class="page-hero__eyebrow">Book</p>
+      <h1>Book your free audit.</h1>
+      <p>We review every application personally. If your brand is a good fit, we&rsquo;ll schedule a call, walk through your subscriber journey, and tell you exactly what we&rsquo;d fix first &mdash; at no cost and no obligation.</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- LEFT: INFO -->
+        <div>
+          <p class="section__eyebrow">What to Expect</p>
+          <h2 style="margin-bottom:8px; font-size:1.6rem;">A straightforward process.</h2>
+          <p style="color:var(--text-mid); margin-bottom:32px; font-size:.93rem;">Fill in the form, we review your details, and if it&rsquo;s a good fit we reach out to schedule a call.</p>
+
+          <div>
+            <div class="process-step">
+              <div class="process-step__num">1</div>
+              <div>
+                <h4>You apply</h4>
+                <p>Fill in the form with your brand details. The more context you give, the more useful the audit call will be.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num">2</div>
+              <div>
+                <h4>We review</h4>
+                <p>We look at your application and your current subscriber journey. We respond to every application within 24 hours.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num">3</div>
+              <div>
+                <h4>Audit call</h4>
+                <p>We walk through your current funnel, identify the gaps, and tell you what we&rsquo;d fix and in what order &mdash; no charge.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num">4</div>
+              <div>
+                <h4>You decide</h4>
+                <p>If you want to move forward, we&rsquo;ll propose the option that fits your situation. No pressure either way.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:36px;">
+            <p class="section__eyebrow" style="margin-bottom:0;">Contact</p>
+            <div class="contact-info__item" style="border-top:1px solid var(--border);">
+              <div class="contact-info__icon">&#x2709;</div>
+              <div>
+                <p class="contact-info__label">Email</p>
+                <p class="contact-info__value"><a href="mailto:anshnagloor@gmail.com">anshnagloor@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <div class="contact-info__icon">&#x23F1;</div>
+              <div>
+                <p class="contact-info__label">Response Time</p>
+                <p class="contact-info__value">Within 24 hours of application</p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <div class="contact-info__icon">&#x1F4CB;</div>
+              <div>
+                <p class="contact-info__label">Minimum Requirements</p>
+                <p class="contact-info__value">Live Shopify store &bull; Proven, shippable product &bull; ~$2,000/mo available for ad spend</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="guarantee-box" style="margin-top:32px;">
+            <div class="guarantee-box__icon">&#9889;</div>
+            <div>
+              <h3>50 subscribers in 60 days</h3>
+              <p>Both options carry our performance guarantee. We only succeed when you do.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: FORM -->
+        <div>
+          <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <!-- Sign up at formspree.io, create a form, and replace YOUR_FORM_ID above -->
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="fname">First name *</label>
+                <input class="form__input" id="fname" name="first_name" type="text" placeholder="Ansh" required>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="lname">Last name *</label>
+                <input class="form__input" id="lname" name="last_name" type="text" placeholder="Nagloor" required>
+              </div>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="email">Email address *</label>
+              <input class="form__input" id="email" name="email" type="email" placeholder="you@brand.com" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="brand">Brand / business name *</label>
+              <input class="form__input" id="brand" name="brand" type="text" placeholder="Your Subscription Co." required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="website">Website URL</label>
+              <input class="form__input" id="website" name="website" type="url" placeholder="https://yourbrand.com">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="niche">What type of subscription box?</label>
+              <input class="form__input" id="niche" name="niche" type="text" placeholder="e.g. Women&rsquo;s lifestyle, pet, wellness, beauty&hellip;">
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="subscribers">Current subscriber count</label>
+                <select class="form__select" id="subscribers" name="subscriber_count">
+                  <option value="">Select range</option>
+                  <option>Under 100</option>
+                  <option>100 &ndash; 500</option>
+                  <option>500 &ndash; 2,000</option>
+                  <option>2,000+</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="revenue">Monthly revenue</label>
+                <select class="form__select" id="revenue" name="monthly_revenue">
+                  <option value="">Select range</option>
+                  <option>Under $5k</option>
+                  <option>$5k &ndash; $20k</option>
+                  <option>$20k &ndash; $50k</option>
+                  <option>$50k+</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="pain">What&rsquo;s your biggest growth challenge right now? *</label>
+              <textarea class="form__textarea" id="pain" name="challenge" placeholder="e.g. Acquisition costs are rising and churn is too high in the first 90 days. We have around 300 subscribers but growth has stalled&#x2026;" required></textarea>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="extra">Anything else you&rsquo;d like us to know?</label>
+              <textarea class="form__textarea" id="extra" name="extra" style="min-height:80px;" placeholder="Platform, tools you use, timeline, questions&#x2026;"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg btn--full">Submit Application</button>
+            <p class="form__note">We respond to every application within 24 hours. Your information is kept confidential.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo"><img src="logo.svg" alt="" class="nav__logo-icon" aria-hidden="true">AlturaCo</a>
+          <p>Acquisition, conversion &amp; retention systems for online subscription-box brands.</p>
+        </div>
+        <div class="footer__col">
+          <h5>Pages</h5>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Book Now</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="index.html#who-we-serve">Who We Serve</a></li>
+            <li><a href="contact.html">Book an Audit</a></li>
+            <li><a href="mailto:anshnagloor@gmail.com">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 AlturaCo. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      links.classList.remove('nav__links--open');
+      toggle.classList.remove('nav__toggle--open');
+      document.body.style.overflow = '';
+    }));
+    (function () {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+      }, { threshold: 0.08, rootMargin: '0px 0px -48px 0px' });
+      document.querySelectorAll('.section__header, .guarantee-box, .process-step').forEach(el => {
+        el.classList.add('reveal');
+        obs.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>
