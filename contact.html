@@ -172,67 +172,42 @@
 
         <!-- RIGHT: FORM -->
         <div>
-          <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <!-- Sign up at formspree.io, create a form, and replace YOUR_FORM_ID above -->
+          <div data-fs-success style="display:none; background:var(--blue-pale); border:1px solid var(--blue-border); border-radius:var(--r); padding:20px 24px; margin-bottom:20px; color:var(--text); font-size:.92rem; font-weight:500;">
+            &#10003; Application received &mdash; we&rsquo;ll be in touch within 24 hours.
+          </div>
+          <div data-fs-error style="display:none; background:#fef2f2; border:1px solid #fecaca; border-radius:var(--r); padding:16px 20px; margin-bottom:16px; color:#991b1b; font-size:.875rem;"></div>
+
+          <form id="book-form" class="form" action="https://formspree.io/f/xpqeneaq" method="POST">
             <div class="form__row">
               <div class="form__group">
                 <label class="form__label" for="fname">First name *</label>
-                <input class="form__input" id="fname" name="first_name" type="text" placeholder="Ansh" required>
+                <input class="form__input" id="fname" name="first_name" type="text" placeholder="Ansh" required data-fs-field>
+                <span data-fs-error="first_name" style="color:#dc2626; font-size:.78rem;"></span>
               </div>
               <div class="form__group">
                 <label class="form__label" for="lname">Last name *</label>
-                <input class="form__input" id="lname" name="last_name" type="text" placeholder="Nagloor" required>
+                <input class="form__input" id="lname" name="last_name" type="text" placeholder="Nagloor" required data-fs-field>
+                <span data-fs-error="last_name" style="color:#dc2626; font-size:.78rem;"></span>
               </div>
             </div>
             <div class="form__group">
               <label class="form__label" for="email">Email address *</label>
-              <input class="form__input" id="email" name="email" type="email" placeholder="you@brand.com" required>
+              <input class="form__input" id="email" name="email" type="email" placeholder="you@brand.com" required data-fs-field>
+              <span data-fs-error="email" style="color:#dc2626; font-size:.78rem;"></span>
             </div>
             <div class="form__group">
               <label class="form__label" for="brand">Brand / business name *</label>
-              <input class="form__input" id="brand" name="brand" type="text" placeholder="Your Subscription Co." required>
+              <input class="form__input" id="brand" name="brand" type="text" placeholder="Your Subscription Co." required data-fs-field>
             </div>
-            <div class="form__group">
-              <label class="form__label" for="website">Website URL</label>
-              <input class="form__input" id="website" name="website" type="url" placeholder="https://yourbrand.com">
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="niche">What type of subscription box?</label>
-              <input class="form__input" id="niche" name="niche" type="text" placeholder="e.g. Women&rsquo;s lifestyle, pet, wellness, beauty&hellip;">
-            </div>
-            <div class="form__row">
-              <div class="form__group">
-                <label class="form__label" for="subscribers">Current subscriber count</label>
-                <select class="form__select" id="subscribers" name="subscriber_count">
-                  <option value="">Select range</option>
-                  <option>Under 100</option>
-                  <option>100 &ndash; 500</option>
-                  <option>500 &ndash; 2,000</option>
-                  <option>2,000+</option>
-                </select>
-              </div>
-              <div class="form__group">
-                <label class="form__label" for="revenue">Monthly revenue</label>
-                <select class="form__select" id="revenue" name="monthly_revenue">
-                  <option value="">Select range</option>
-                  <option>Under $5k</option>
-                  <option>$5k &ndash; $20k</option>
-                  <option>$20k &ndash; $50k</option>
-                  <option>$50k+</option>
-                </select>
-              </div>
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="pain">What&rsquo;s your biggest growth challenge right now? *</label>
-              <textarea class="form__textarea" id="pain" name="challenge" placeholder="e.g. Acquisition costs are rising and churn is too high in the first 90 days. We have around 300 subscribers but growth has stalled&#x2026;" required></textarea>
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="extra">Anything else you&rsquo;d like us to know?</label>
-              <textarea class="form__textarea" id="extra" name="extra" style="min-height:80px;" placeholder="Platform, tools you use, timeline, questions&#x2026;"></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary btn--lg btn--full">Submit Application</button>
+            <button type="submit" class="btn btn--primary btn--lg btn--full" data-fs-submit-btn>Submit Application</button>
             <p class="form__note">We respond to every application within 24 hours. Your information is kept confidential.</p>
           </form>
+
+          <script>
+            window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+            formspree('initForm', { formElement: '#book-form', formId: 'xpqeneaq' });
+          </script>
+          <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
         </div>
 
       </div>
