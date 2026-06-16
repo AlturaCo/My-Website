@@ -235,7 +235,7 @@ p  { line-height: 1.72; }
 .nav--scrolled .nav__links > li > a:not(.btn) { color: var(--text-mid); }
 .nav__links > li > a:not(.btn):hover           { color: var(--dt); background: rgba(255,255,255,.08); }
 .nav--scrolled .nav__links > li > a:not(.btn):hover { color: var(--text); background: var(--bg-1); }
-.nav__links > li > a.active { color: var(--blue) !important; }
+.nav__links > li > a.active:not(.btn) { color: var(--blue) !important; }
 .nav__links .btn { margin-left: 10px; }
 
 .nav__toggle {
