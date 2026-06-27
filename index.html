@@ -47,27 +47,6 @@
     </div>
   </section>
 
-  <!-- STATS BAR -->
-  <div class="stats-bar">
-    <div class="container stats-bar__grid">
-      <div class="stat">
-        <span class="stat__number">10</span>
-        <span class="stat__label">New students guaranteed every month</span>
-      </div>
-      <div class="stat">
-        <span class="stat__number">[STAT TO VERIFY]</span>
-        <span class="stat__label">Size of the independent college counseling market</span>
-      </div>
-      <div class="stat">
-        <span class="stat__number">[STAT TO VERIFY]</span>
-        <span class="stat__label">Average value of one enrolled student / family</span>
-      </div>
-      <div class="stat">
-        <span class="stat__number">[STAT TO VERIFY]</span>
-        <span class="stat__label">Of practices rely entirely on unpredictable referrals</span>
-      </div>
-    </div>
-  </div>
 
   <!-- SECTION: Meta Ads — text left, illustration right -->
   <section class="split">
@@ -494,7 +473,7 @@
       const obs = new IntersectionObserver(entries => {
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
       }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
-      document.querySelectorAll('.hero__inner, .stats-bar, .split__text, .split__illus, .statement__inner, .hiw__header, .hiw__step, .who__header, .who__card, .g-band > .container, .faq-wrap > .container > div > div, .contact-wrap__grid > *').forEach((el, i) => {
+      document.querySelectorAll('.hero__inner, .split__text, .split__illus, .statement__inner, .hiw__header, .hiw__step, .who__header, .who__card, .g-band > .container, .faq-wrap > .container > div > div, .contact-wrap__grid > *').forEach((el, i) => {
         el.classList.add('reveal');
         obs.observe(el);
       });
