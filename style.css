@@ -796,11 +796,11 @@ p  { line-height: 1.72; }
    All new classes; existing classes kept for inner-page compat.
    ═══════════════════════════════════════════════════════════════ */
 
-/* ── Nav: light defaults (hero is now white) ─────────────────── */
-.nav__logo { color: var(--text); }
-.nav__links > li > a:not(.btn) { color: var(--text-mid); }
-.nav__links > li > a:not(.btn):hover { color: var(--text); background: var(--bg-1); }
-.nav__toggle span { background: var(--text); }
+/* ── Nav: white text over dark hero, flips when scrolled ─────── */
+.nav__logo { color: var(--dt); }
+.nav__links > li > a:not(.btn) { color: var(--dt-mid); }
+.nav__links > li > a:not(.btn):hover { color: var(--dt); background: rgba(255,255,255,.08); }
+.nav__toggle span { background: var(--dt); }
 
 /* ── Squiggle accent ─────────────────────────────────────────── */
 .squiggle { display: block; margin-bottom: 22px; line-height: 0; }
@@ -985,24 +985,14 @@ p  { line-height: 1.72; }
 .contact-wrap .guarantee-box h3 { color: var(--text); }
 .contact-wrap .guarantee-box p  { color: var(--text-mid); }
 
-/* ── Hero: light ─────────────────────────────────────────────── */
-.hero { background: var(--bg); }
-.hero::after { background: linear-gradient(90deg, transparent, var(--border), transparent); }
-.hero h1 { color: var(--text); }
-.hero__sub { color: var(--text-mid); }
-.hero__proof { color: var(--muted); }
-.hero__proof::before { background: var(--border-mid); }
-.hero__eyebrow { color: var(--blue); }
-.hero .btn--ghost {
-  color: var(--text-mid);
-  border-color: var(--border-mid);
-  background: transparent;
-}
-.hero .btn--ghost:hover {
-  color: var(--text);
-  border-color: var(--border-mid);
-  background: var(--bg-1);
-}
+/* ── Hero: dark ──────────────────────────────────────────────── */
+.hero { background: var(--dark); }
+.hero::after { background: linear-gradient(90deg, transparent, var(--dborder-mid), transparent); }
+.hero h1 { color: var(--dt); }
+.hero__sub { color: var(--dt-mid); }
+.hero__proof { color: var(--dt-muted); }
+.hero__proof::before { background: var(--dborder-mid); }
+.hero__eyebrow { color: var(--blue-bright); }
 
 /* ── Page hero: light ────────────────────────────────────────── */
 .page-hero { background: var(--bg-1); border-bottom-color: var(--border); }
