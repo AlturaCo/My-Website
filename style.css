@@ -1,19 +1,19 @@
 /* =============================================================
    AlturaCo — Global Stylesheet
-   White-dominant, near-black text, bold type,
-   amber/orange accent, minimal chrome, scroll reveals.
+   Classic marketing-agency style: navy + serif display type,
+   amber accent, structured sections, scroll reveals.
    ============================================================= */
 
 :root {
   /* Light backgrounds */
   --bg:   #ffffff;
-  --bg-1: #f9fafb;
-  --bg-2: #f3f4f6;
+  --bg-1: #f8f7f4;
+  --bg-2: #f1efe9;
 
-  /* Dark sections */
-  --dark:     #0d0d0d;
-  --dark-mid: #161616;
-  --dark-alt: #1d1d1d;
+  /* Dark sections — deep navy */
+  --dark:     #101c33;
+  --dark-mid: #16243d;
+  --dark-alt: #1a2b4a;
 
   /* Amber/orange accent */
   --blue:        #d97706;
@@ -31,11 +31,11 @@
   --green-border: rgba(217, 119, 6, 0.22);
 
   /* Light-section text */
-  --text:      #111111;
-  --text-mid:  #4b5563;
-  --muted:     #9ca3af;
-  --border:    #e5e7eb;
-  --border-mid:#d1d5db;
+  --text:      #142138;
+  --text-mid:  #47526b;
+  --muted:     #8b93a5;
+  --border:    #e5e3dc;
+  --border-mid:#d3d0c6;
 
   /* Dark-section text */
   --dt:         #f9fafb;
@@ -45,10 +45,11 @@
   --dborder-mid:rgba(255,255,255,.14);
 
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --max:  1200px;
-  --r:    10px;
-  --r-sm: 7px;
-  --r-lg: 16px;
+  --r:    6px;
+  --r-sm: 4px;
+  --r-lg: 10px;
 
   --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
   --shadow:    0 4px 12px rgba(0,0,0,.07);
@@ -81,18 +82,19 @@ button { font-family: var(--font); }
 }
 
 /* ── Typography ───────────────────────────────────────────── */
-h1 { font-size: clamp(2.4rem, 5.5vw, 4rem);    font-weight: 900; line-height: 1.08; letter-spacing: -.03em; }
-h2 { font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 800; line-height: 1.15; letter-spacing: -.022em; }
+h1 { font-family: var(--font-display); font-size: clamp(2.4rem, 5.5vw, 4rem);    font-weight: 800; line-height: 1.12; letter-spacing: -.015em; }
+h2 { font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 700; line-height: 1.18; letter-spacing: -.01em; }
 h3 { font-size: 1.15rem; font-weight: 700; line-height: 1.3; }
 h4 { font-size: 1rem;    font-weight: 600; line-height: 1.35; }
 h5 { font-size: .75rem;  font-weight: 700; text-transform: uppercase; letter-spacing: .1em; }
 p  { line-height: 1.72; }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 55%, var(--blue-bright) 100%);
+  background: linear-gradient(135deg, var(--blue-bright) 0%, var(--blue) 60%, var(--blue-bright) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-style: italic;
 }
 .text-blue  { color: var(--blue); }
 .text-muted { color: var(--muted); }
@@ -802,8 +804,8 @@ p  { line-height: 1.72; }
 .nav__links > li > a:not(.btn):hover { color: var(--dt); background: rgba(255,255,255,.08); }
 .nav__toggle span { background: var(--dt); }
 
-/* ── Squiggle accent ─────────────────────────────────────────── */
-.squiggle { display: block; margin-bottom: 22px; line-height: 0; }
+/* ── Squiggle accent — retired in the classic-corporate restyle ── */
+.squiggle { display: none; }
 
 /* ── Kicker / eyebrow ────────────────────────────────────────── */
 .kicker {
@@ -818,14 +820,15 @@ p  { line-height: 1.72; }
 
 /* ── Large section headline ──────────────────────────────────── */
 .headline {
+  font-family: var(--font-display);
   font-size: clamp(2rem, 3.8vw, 3rem);
-  font-weight: 900;
+  font-weight: 800;
   color: var(--text);
-  line-height: 1.1;
-  letter-spacing: -.028em;
+  line-height: 1.15;
+  letter-spacing: -.012em;
   margin-bottom: 20px;
 }
-.headline em { font-style: normal; color: var(--blue); }
+.headline em { font-style: italic; color: var(--blue); }
 
 /* ── Body copy ───────────────────────────────────────────────── */
 .body-copy {
@@ -927,26 +930,26 @@ p  { line-height: 1.72; }
 .who__card h4 { color: var(--text); font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
 .who__card p  { color: var(--text-mid); font-size: .88rem; line-height: 1.65; }
 
-/* ── Guarantee band — orange bg for impact ───────────────────── */
+/* ── Guarantee band — navy bg for impact ─────────────────────── */
 .g-band {
   padding: 96px 0;
-  background: var(--blue);
-  border-top: 1px solid var(--blue-dark);
-  border-bottom: 1px solid var(--blue-dark);
+  background: var(--dark);
+  border-top: 1px solid var(--dark-alt);
+  border-bottom: 1px solid var(--dark-alt);
   text-align: center;
 }
 .g-band__promise {
+  font-family: var(--font-display);
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  font-weight: 900;
-  color: #fff;
-  letter-spacing: -.025em;
-  line-height: 1.15;
+  font-weight: 800;
+  color: var(--dt);
+  letter-spacing: -.01em;
+  line-height: 1.2;
   margin-bottom: 22px;
 }
-.g-band__promise em { font-style: normal; color: #fff; }
-.g-band__body { color: rgba(255,255,255,.82); font-size: .97rem; max-width: 540px; margin: 0 auto 32px; line-height: 1.75; }
-.g-band .kicker { color: rgba(255,255,255,.7); }
-.g-band .squiggle svg path { stroke: rgba(255,255,255,.55); }
+.g-band__promise em { font-style: italic; color: var(--blue-bright); }
+.g-band__body { color: var(--dt-mid); font-size: .97rem; max-width: 540px; margin: 0 auto 32px; line-height: 1.75; }
+.g-band .kicker { color: var(--blue-bright); }
 
 /* ── FAQ ─────────────────────────────────────────────────────── */
 .faq-wrap { padding: 108px 0; border-top: 1px solid var(--border); }
@@ -1020,6 +1023,17 @@ p  { line-height: 1.72; }
 .footer__bottom p,
 .footer__bottom a     { color: var(--muted); }
 .footer__bottom a:hover { color: var(--text-mid); }
+
+/* ── Light sections: remap dark-section text vars so legacy
+      inline styles (color:var(--dt-mid) etc.) stay readable ──── */
+.section, .section--dark, .section--alt, .split, .statement, .hiw,
+.who, .faq-wrap, .contact-wrap, .testimonials, .page-hero, .cta-strip {
+  --dt: var(--text);
+  --dt-mid: var(--text-mid);
+  --dt-muted: var(--muted);
+  --dborder: var(--border);
+  --dborder-mid: var(--border-mid);
+}
 
 /* ── Light overrides for section--dark / section--alt ───────── */
 .section.section--dark { background: var(--bg-1); }
@@ -1111,4 +1125,91 @@ p  { line-height: 1.72; }
   .g-band { padding: 72px 0; }
   .statement .headline { font-size: clamp(1.8rem, 6vw, 2.4rem); }
   .g-band__promise     { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Testimonials / client proof
+   ═══════════════════════════════════════════════════════════════ */
+.testimonials {
+  padding: 108px 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+.testimonials__header { max-width: 640px; margin-bottom: 56px; }
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.proof-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.proof-card__media { background: #000; line-height: 0; }
+.proof-card__media img { width: 100%; height: auto; }
+.proof-card--video .proof-card__media {
+  aspect-ratio: 9 / 16;
+  position: relative;
+}
+.proof-card--video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.proof-card__caption {
+  padding: 16px 20px;
+  border-top: 1px solid var(--border);
+  font-size: .84rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+.proof-card__caption strong {
+  display: block;
+  color: var(--text);
+  font-size: .9rem;
+  margin-bottom: 2px;
+}
+.proof-card__caption span { color: var(--blue-dark); font-weight: 600; }
+
+/* Slack-style message card */
+.slack-card {
+  margin-top: 24px;
+  background: #1a1d21;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--r-lg);
+  padding: 28px 32px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  box-shadow: var(--shadow);
+}
+.slack-card__avatar {
+  width: 42px; height: 42px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4a5568, #2d3748);
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.slack-card__meta { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+.slack-card__name { color: #fff; font-weight: 800; font-size: .95rem; }
+.slack-card__time { color: rgba(255,255,255,.45); font-size: .76rem; }
+.slack-card__text { color: rgba(255,255,255,.88); font-size: .95rem; line-height: 1.65; }
+.slack-card__text strong { color: #fff; }
+
+@media (max-width: 900px) {
+  .testimonials { padding: 72px 0; }
+  .testimonials__grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  .slack-card { max-width: 420px; margin: 24px auto 0; flex-direction: column; padding: 24px; }
 }
