@@ -1178,38 +1178,11 @@ p  { line-height: 1.72; }
 }
 .proof-card__caption span { color: var(--blue-dark); font-weight: 600; }
 
-/* Slack-style message card */
-.slack-card {
-  margin-top: 24px;
-  background: #1a1d21;
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: var(--r-lg);
-  padding: 28px 32px;
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  box-shadow: var(--shadow);
-}
-.slack-card__avatar {
-  width: 42px; height: 42px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #4a5568, #2d3748);
-  color: #e2e8f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  font-weight: 800;
-  flex-shrink: 0;
-}
-.slack-card__meta { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
-.slack-card__name { color: #fff; font-weight: 800; font-size: .95rem; }
-.slack-card__time { color: rgba(255,255,255,.45); font-size: .76rem; }
-.slack-card__text { color: rgba(255,255,255,.88); font-size: .95rem; line-height: 1.65; }
-.slack-card__text strong { color: #fff; }
+/* Wide screenshot card (Jeremy's Slack message) */
+.proof-card--wide { margin-top: 24px; }
 
 @media (max-width: 900px) {
   .testimonials { padding: 72px 0; }
   .testimonials__grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
-  .slack-card { max-width: 420px; margin: 24px auto 0; flex-direction: column; padding: 24px; }
+  .proof-card--wide { max-width: 420px; margin: 24px auto 0; }
 }

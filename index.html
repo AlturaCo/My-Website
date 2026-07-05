@@ -85,19 +85,13 @@
           </div>
         </div>
       </div>
-      <div class="slack-card">
-        <div class="slack-card__avatar">JS</div>
-        <div>
-          <div class="slack-card__meta">
-            <span class="slack-card__name">Jeremy S</span>
-            <span class="slack-card__time">12:06 AM</span>
-          </div>
-          <p class="slack-card__text">
-            This month: $50000 revenue<br>
-            $6250 ad spend<br>
-            8x return on ad spend<br><br>
-            <strong>Really appreciate all the help throughout the process. Results have exceeded my expectations. Thanks so much!</strong>
-          </p>
+      <div class="proof-card proof-card--wide">
+        <div class="proof-card__media">
+          <img src="images/testimonial-jeremy.png" alt="Slack message from Jeremy S: this month $50000 revenue, $6250 ad spend, 8x return on ad spend. Really appreciate all the help throughout the process. Results have exceeded my expectations." width="1630" height="294" loading="lazy">
+        </div>
+        <div class="proof-card__caption">
+          <strong>Jeremy</strong>
+          <span>$50k revenue &middot; 8x return on ad spend</span> &mdash; from $6,250 in ad spend.
         </div>
       </div>
     </div>
@@ -529,7 +523,7 @@
       const obs = new IntersectionObserver(entries => {
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
       }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
-      document.querySelectorAll('.hero__inner, .testimonials__header, .proof-card, .slack-card, .split__text, .split__illus, .statement__inner, .hiw__header, .hiw__step, .who__header, .who__card, .g-band > .container, .faq-wrap > .container > div > div, .contact-wrap__grid > *').forEach((el, i) => {
+      document.querySelectorAll('.hero__inner, .testimonials__header, .proof-card, .split__text, .split__illus, .statement__inner, .hiw__header, .hiw__step, .who__header, .who__card, .g-band > .container, .faq-wrap > .container > div > div, .contact-wrap__grid > *').forEach((el, i) => {
         el.classList.add('reveal');
         obs.observe(el);
       });
