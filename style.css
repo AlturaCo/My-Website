@@ -1056,6 +1056,15 @@ p  { line-height: 1.72; }
 
 /* Services page */
 .section.section--dark [style*="background:var(--bg-2)"] { background: var(--bg-2) !important; border-color: var(--border) !important; }
+/* "What's Included" cards used an inline dark-navy background (--dark-alt);
+   on the now-light section that left dark-remapped text unreadable on navy.
+   Flip them to a white card so the dark text is legible. */
+.section.section--dark [style*="background:var(--dark-alt)"],
+.section.section--alt  [style*="background:var(--dark-alt)"] {
+  background: var(--bg) !important;
+  border-color: var(--border) !important;
+  box-shadow: var(--shadow-sm);
+}
 .section.section--dark ul li  { color: var(--text-mid); }
 .section.section--dark .check { color: var(--blue); }
 
